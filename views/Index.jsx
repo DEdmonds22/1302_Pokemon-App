@@ -3,7 +3,7 @@ import React from "react";
 function Index({pokemon}) {
 const divStyle = {
     backgroundColor: 'red'
-}
+};
 
     const titleStyle = {
         color: '#ffffff',
@@ -12,8 +12,9 @@ const divStyle = {
 
     const linkStyle = {
         textDecoration: 'none',
-        fontFamily: 'Monaco'
-    }
+        fontFamily: 'Monaco',
+        textTransform: 'capitalize'
+    };
 
     return (
         <div style={divStyle}>
