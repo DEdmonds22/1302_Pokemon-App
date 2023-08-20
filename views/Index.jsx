@@ -2,7 +2,8 @@ import React from "react";
 
 function Index({pokemon}) {
 const divStyle = {
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    textAlign: 'center'
 };
 
     const titleStyle = {
@@ -22,7 +23,11 @@ const divStyle = {
             <ul>
                 {pokemon.map((choice, i) => {
                     return (
-                        <li key={i} style={linkStyle}><img src={choice.img} alt={choice.name} /><br /> {choice.name}</li>
+                        <li key={i} style={linkStyle}>
+                            <img src={choice.img} alt={choice.name} />
+                            <br />
+                            <a href={`/pokemon/${i}`}>{choice.name}</a>
+                        </li>
                     )
                 })}
             </ul>
