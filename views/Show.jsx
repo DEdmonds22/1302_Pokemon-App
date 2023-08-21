@@ -8,19 +8,42 @@ function Show({choice}) {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        direction: 'column',
-        gap: '3rem'
-    }
+        backgroundColor: '#b82525',
+    };
+
+    const mainStyle = {
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '3rem',
+        color: '#ffffff',
+        backgroundColor: 'black',
+        padding: '5em',
+        border: '4px dotted white',
+    };
     
-    const h1Style = {
+    const h2Style = {
         fontFamily: 'Monaco',
         textTransform: 'capitalize'
-    }
+    };
+
+    const linkStyle = {
+        textDecoration: 'none',
+        fontFamily: 'Monaco',
+        color: 'purple',
+        border: '2px dotted white',
+        padding: "0.5em 2em"
+    };
 
     return(
         <div style={divStyling}>
-            <img src={choice.img} />
-            <h1 style={h1Style}>You chose {choice.name}!</h1>
+            <main style={mainStyle}>
+                <h1>Gotta Catch 'Em All</h1>
+                <img src={`${choice.img}.jpg `}/>
+                <h2 style={h2Style}>You chose {choice.name}!</h2>
+                <a href={`/pokemon`} style={linkStyle}>BACK</a>
+            </main>
         </div>
     );
 };
