@@ -43,14 +43,15 @@ const divStyle = {
                 {pokemon.map((choice, i) => {
                     return (
                         <li key={i} style={linkStyle}>
-                            <img src={`${choice.img}.jpg `}alt={choice.name} />
+                            <img src={`${choice.img}.jpg `} alt={choice.name} />
                             <br />
                             <br />
-                            <a href={`/pokemon/${i}`} style={aLinkStyle}>{choice.name}</a>
+                            <a href={`/pokemon/${choice._id}`} style={aLinkStyle}>{choice.name}</a>
                         </li>
                     )
-                })};
+                })}
             </ul>
+            <a href="/pokemon/add">Add a Pokemon!</a>
         </div>
     );
 };
